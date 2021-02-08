@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+      <style>
+        /* width */
+        ::-webkit-scrollbar {
+          width: 15px;
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #2f3136; 
+        }
+         
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #232b2b;
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #232b2b;
+ 
+        }
+        </style>
+
+
+        <style>
+        body{
+            background: #2f3136;
+            height: 1500px;
+        }
+        .center {
+            display: block;
+            margin-left: 250px;
+            margin-top: 20px;
+            margin-right: auto;
+            width: 40%;
+        }
+        h1 {
+            display: block;
+            margin-left: 300px;
+            margin-right: auto;
+            width: 50%;
+        }
+        h3 {
+            display: inline-block;
+            margin-left: 305px;
+            margin-right: auto;
+            width: 50%;
+            margin-bottom: 200px;
+        }
+        </style>
+        <style>
+        .content {
+        width: 237px;
+        font-size: 36px;
+        line-height: 40px;
+        font-family: 'Muli';
+        color: #ecf0f1;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -15px;
+        margin-left: -118px;
+        }
+        </style>
+        <style>
+            body {
+              margin: 0;
+              font-family: Arial;
+            }
+            
+            .topnav {
+              overflow: hidden;
+              background-color:  #232b2b;
+            }
+            
+            .topnav a {
+              float: left;
+              color: #f2f2f2;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+              font-size: 17px;
+            }
+            .topnav .a2 {
+              float: right;
+              color: #f2f2f2;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+              font-size: 17px;
+            }
+            .topnav a:hover {
+              background-color: #ffffff;
+              color: #2F7FFF;
+            }
+            
+            .topnav a.active {
+              background-color: #232b2b;
+              color: white;
+            }
+            
+            .button {
+              border-radius: 4px;
+              background-color: #f4511e;
+              border: none;
+              color: #FFFFFF;
+              text-align: center;
+              font-size: 28px;
+              padding: 20px;
+              width: 200px;
+              transition: all 0.5s;
+              cursor: pointer;
+              margin: 5px;
+            }
+            
+            .button span {
+              cursor: pointer;
+              display: inline-block;
+              position: relative;
+              transition: 0.5s;
+            }
+            
+            .button span:after {
+              content: '\00bb';
+              position: absolute;
+              opacity: 0;
+              top: 0;
+              right: -20px;
+              transition: 0.5s;
+            }
+            
+            .button:hover span {
+              padding-right: 25px;
+            }
+            
+            .button:hover span:after {
+              opacity: 1;
+              right: 0;
+            }
+            </style>
+            <style>
+              .container{
+                background-color: #2f3136;
+                height: 700px;
+                margin-top: -125px;
+                width: 60%;
+              }
+              .container .card{
+                background-color: #232b2b;
+              }
+              a {
+              float: left;
+              color: #f2f2f2;
+              text-align: center;
+              text-decoration: none;
+              font-size: 17px;
+            }
+            a:hover {
+              float: left;
+              color: #2F7FFF;
+              text-align: center;
+              text-decoration: none;
+              font-size: 17px;
+            }
+              </style>
+              <style>
+                .moderation table {
+                  border-radius: 50%;
+                  border: 6px solid #f4511e;
+                  border-top: #232b2b;
+                  border-right: #232b2b;
+                  border-bottom: #232b2b;
+                  width: 60%;
+                }
+                .tickets table {
+                  border-radius: 50%;
+                  border: 6px solid #d2db4a;
+                  border-top: #232b2b;
+                  border-right: #232b2b;
+                  border-bottom: #232b2b;
+                  width: 60%;
+                }
+                .utils table {
+                  border-radius: 50%;
+                  border: 6px solid rgb(0, 140, 255);
+                  border-top: #232b2b;
+                  border-right: #232b2b;
+                  border-bottom: #232b2b;
+                  width: 60%;
+                }
+                .custom table {
+                  border-radius: 50%;
+                  border: 6px solid rgb(0, 255, 0);
+                  border-top: #232b2b;
+                  border-right: #232b2b;
+                  border-bottom: #232b2b;
+                  width: 60%;
+                }
+                .tags table{
+                  border-radius: 50%;
+                  border: 6px solid rgb(255, 153, 0);
+                  border-top: #232b2b;
+                  border-right: #232b2b;
+                  border-bottom: #232b2b;
+                  width: 60%;
+                }
+                th, td {
+                  text-align: left;
+                  padding: 8px;
+                  font-family: Arial;
+                  color: #fff;
+                }
+                
+                tr:nth-child() {background-color: #f2f2f2;}
+                </style>
+        <title>Twobit - Commands</title>
+        <link rel="icon" href="pfp.png" type="image/png" sizes="16x16">
+    </head>
+<body>
+    <div class="topnav">
+        <a href = "index.html" style="font-family:verdana;color: white" align = "left" class="active"><b>TWOBIT</b></a>
+        <a href="about.html"><b>Features</b></a>
+        <a href="commands.html"><b>Commands</b></a>
+        <a href="dashboard.html"><b>Dashboard</b></a>
+        <a target = "blank" href="https://discord.gg/vGB8DFQcPA"><b>Support</b></a>
+        <a target = "blank" href="https://discord.com/api/oauth2/authorize?client_id=805090348665798706&permissions=8&scope=bot"><b>Invite</b></a>
+        <a style = "top:0;right:0;"target = "blank" href="https://discord.com/oauth2/authorized" class = "a2" ><b>Login</b></a>  
+        <a target = "blank" href="https://discordbotlist.com/bots/beta"><b>View on DBL</b></a>
+
+      </div>
+    <h1 style="font-family:Arial;margin-top: 50px;color: white" align = "center"><b>Twobit's Command List</b></h1>
+    <h3 style="font-family:Arial;margin-top: 1px;color: white" align = "center"><b>These are all commands that power Twobit and your server!</b></h3>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      
+    <div class="container">
+    
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+              Moderation
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+              <div style="overflow-x:auto;" class="moderation">
+                <table>
+                  <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>Example</th>
+            
+                  </tr>
+                  <tr>
+                    <td>ban</td>
+                    <td>Ban any user from your guild.</td>
+                    <td>>ban [user] [reason]</td>
+                  </tr>
+                  <tr>
+                    <td>kick</td>
+                    <td>Kick any user from your guild.</td>
+                    <td>>kick [user] [reason]</td>
+                  </tr>
+                  <tr>
+                    <td>mute</td>
+                    <td>Mute any user from your guild.</td>
+                    <td>>mute [user] [reason]</td>
+                  </tr>
+                  <tr>
+                    <td>warn</td>
+                    <td>Warn any user from your guild.</td>
+                    <td>>warn [user] [reason]</td>
+                  </tr>
+                  <tr>
+                    <td>purge</td>
+                    <td>Delete previous messages instantly</td>
+                    <td>>purge [Number of messages]</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+            Tickets
+          </a>
+          </div>
+          <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <div style="overflow-x:auto;" class="tickets">
+                <table>
+                  <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>Example</th>
+            
+                  </tr>
+                  <tr>
+                    <td>create</td>
+                    <td>Create a ticket if you need assistance</td>
+                    <td>>ticket create</td>
+                  </tr>
+                  <tr>
+                    <td>close</td>
+                    <td>Close your opened ticket</td>
+                    <td>>ticket close</td>
+                  </tr>
+                  <tr>
+                    <td>rename</td>
+                    <td>Rename your ticket channel</td>
+                    <td>>ticket rename</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+         
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+              Utils
+            </a>
+          </div>
+          <div id="collapseThree" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <div style="overflow-x:auto;" class="utils">
+                <table>
+                  <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>Example</th>
+            
+                  </tr>
+                  <tr>
+                    <td>avatar</td>
+                    <td>View a person's discord avatar</td>
+                    <td>>>avatar or >avatar [user]</td>
+                  </tr>
+                  <tr>
+                    <td>botstats</td>
+                    <td>A usefull command that displays bot statistics.</td>
+                    <td>>botstats</td>
+                  </tr>
+                  <tr>
+                    <td>coinflip</td>
+                    <td>Flip a coin</td>
+                    <td>>coinflip</td>
+                  </tr>
+                  <tr>
+                    <td>cr</td>
+                    <td>View the creator of the bot</td>
+                    <td>>cr</td>
+                  </tr>
+                  <tr>
+                    <td>cr</td>
+                    <td>View the creator of the bot</td>
+                    <td>>cr</td>
+                  </tr>
+                  <tr>
+                    <td>emoji</td>
+                    <td>Add a new emoji to your server within a few seconds</td>
+                    <td>>emoji [name] [url]</td>
+                  </tr>
+                  <tr>
+                    <td>infractions</td>
+                    <td>View all infractions of a user [Warns, bans, kicks, mutes]</td>
+                    <td>>infractions [user]</td>
+                  </tr>
+                  <tr>
+                    <td>invite</td>
+                    <td>Generate Twobit's invite link</td>
+                    <td>>invite</td>
+                  </tr>
+                  <tr>
+                    <td>poll</td>
+                    <td>Create an instant poll</td>
+                    <td>>poll [poll title]</td>
+                  </tr>
+                  <tr>
+                    <td>lock</td>
+                    <td>Lock a channel. No more messages</td>
+                    <td>>lock</td>
+                  </tr>
+                  <tr>
+                    <td>unlock</td>
+                    <td>Unlock an already locked channel</td>
+                    <td>>unlockk</td>
+                  </tr>
+                  <tr>
+                    <td>rate</td>
+                    <td>Fun command to rate something on a scale of 1 to 10</td>
+                    <td>>rate</td>
+                  </tr>
+                  <tr>
+                    <td>whois</td>
+                    <td>Get all the information of a user</td>
+                    <td>>whois or >whois [user]</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+              Tags
+            </a>
+          </div>
+          <div id="collapseFour" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <div style="overflow-x:auto;" class="tags">
+                <table>
+                  <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>Example</th>
+            
+                  </tr>
+                  <tr>
+                    <td>create</td>
+                    <td>Create a tag within a matter of seconds</td>
+                    <td>>tag create [tag name] [content]</td>
+                  </tr>
+                  <tr>
+                    <td>info</td>
+                    <td>View a tag's info</td>
+                    <td>>tag info [tag name]</td>
+                  </tr>
+                  <tr>
+                    <td>remove</td>
+                    <td>Remove an already existing tag</td>
+                    <td>>tag remove [tag name]</td>
+                  </tr>
+                  <tr>
+                    <td>update</td>
+                    <td>Update an already existing tag</td>
+                    <td>>tag update [tag name] [new content]</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
